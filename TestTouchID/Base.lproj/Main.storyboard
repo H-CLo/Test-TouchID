@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestTouchID" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ps3-YB-tad">
+                                <rect key="frame" x="16" y="20" width="343" height="128"/>
+                                <color key="backgroundColor" red="0.85340483550000001" green="0.98011908810000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ONq-9T-ewq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiJ-ci-cCZ">
+                                <rect key="frame" x="16" y="194" width="343" height="30"/>
+                                <state key="normal" title="Keychain add item"/>
+                                <connections>
+                                    <action selector="btnAddItem_onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="27n-v3-qCz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1X-Hv-Iq2">
+                                <rect key="frame" x="16" y="232" width="343" height="30"/>
+                                <state key="normal" title="TouchID: keychain authenticate"/>
+                                <connections>
+                                    <action selector="btnTouchIDKeychainAuth_onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kva-OA-qb0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6d-rT-r9H">
+                                <rect key="frame" x="16" y="156" width="343" height="30"/>
+                                <state key="normal" title="TouchID: local authenticate"/>
+                                <connections>
+                                    <action selector="btnTouchIDLocalAuth_onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vck-hS-ae9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuG-M1-4Ty">
+                                <rect key="frame" x="84" y="270" width="207" height="30"/>
+                                <state key="normal" title="TouchID: Dismiss with timeout"/>
+                                <connections>
+                                    <action selector="btnTouchIDQuitWithTimeout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMR-2X-fOv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AuG-M1-4Ty" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4tE-Qn-6sR"/>
+                            <constraint firstItem="EiJ-ci-cCZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="51q-br-wAG"/>
+                            <constraint firstItem="n1X-Hv-Iq2" firstAttribute="top" secondItem="EiJ-ci-cCZ" secondAttribute="bottom" constant="8" id="HN8-yr-mnC"/>
+                            <constraint firstItem="n1X-Hv-Iq2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IQf-dE-Qeq"/>
+                            <constraint firstItem="Ps3-YB-tad" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Tvv-Jz-0vg"/>
+                            <constraint firstItem="Ps3-YB-tad" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="X0h-o2-HEF"/>
+                            <constraint firstItem="n1X-Hv-Iq2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cxe-nA-X8Z"/>
+                            <constraint firstItem="EiJ-ci-cCZ" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eo2-ia-M8Q"/>
+                            <constraint firstItem="AuG-M1-4Ty" firstAttribute="top" secondItem="n1X-Hv-Iq2" secondAttribute="bottom" constant="8" id="p7a-Mk-VtZ"/>
+                            <constraint firstItem="H6d-rT-r9H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rR6-hx-Dbp"/>
+                            <constraint firstItem="H6d-rT-r9H" firstAttribute="top" secondItem="Ps3-YB-tad" secondAttribute="bottom" constant="8" id="u5d-4U-xEz"/>
+                            <constraint firstItem="Ps3-YB-tad" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vY8-ly-CjI"/>
+                            <constraint firstItem="H6d-rT-r9H" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yX4-oc-iam"/>
+                            <constraint firstItem="EiJ-ci-cCZ" firstAttribute="top" secondItem="H6d-rT-r9H" secondAttribute="bottom" constant="8" id="yzK-E4-7c9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="txtStatus" destination="Ps3-YB-tad" id="ljk-Y4-IwV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="565" y="458"/>
+        </scene>
+    </scenes>
+</document>
