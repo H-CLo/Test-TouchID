@@ -4,7 +4,7 @@
 ## Target: 
 Sample project to test iOS TouchID
 
-Using **Local Authentication** framework: 
+Using **Local Authentication** framework: [Apple LocalAuthentication API Reference](https://developer.apple.com/reference/localauthentication)
 
 Provides facilities for requesting authentication from users with specified security policies.
 
